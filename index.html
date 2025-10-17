@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>NewsFetch Pro — Login</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.emailjs.com/sdk/3.11.0/email.min.js"></script>
+  <script>
+    (function(){
+      emailjs.init("YOUR_PUBLIC_KEY_HERE"); // optional EmailJS
+    })();
+  </script>
+</head>
+<body class="auth-bg">
+  <div class="auth-box">
+    <h1>📰 NewsFetch <span>Pro</span></h1>
+
+    <form id="loginForm" class="form-card">
+      <h2>Login</h2>
+      <input id="loginEmail" type="email" placeholder="Email" required />
+      <input id="loginPassword" type="password" placeholder="Password" required />
+      <button type="submit">Login</button>
+      <p>New here? <a href="#" id="showSignup">Create account</a></p>
+    </form>
+
+    <form id="signupForm" class="form-card" style="display:none;">
+      <h2>Create account</h2>
+      <input id="signupEmail" type="email" placeholder="Email" required />
+      <input id="signupPassword" type="password" placeholder="Password (min 6 chars)" minlength="6" required />
+
+      <label style="display:block;margin-top:8px;">Select your interests:</label>
+      <div class="interest-tags">
+        <label><input type="checkbox" value="technology"> Technology</label>
+        <label><input type="checkbox" value="business"> Business</label>
+        <label><input type="checkbox" value="sports"> Sports</label>
+        <label><input type="checkbox" value="health"> Health</label>
+        <label><input type="checkbox" value="science"> Science</label>
+        <label><input type="checkbox" value="entertainment"> Entertainment</label>
+      </div>
+
+      <button type="submit">Sign up</button>
+      <p>Have account? <a href="#" id="showLogin">Login</a></p>
+    </form>
+  </div>
+
+  <script src="auth.js"></script>
+</body>
+</html>

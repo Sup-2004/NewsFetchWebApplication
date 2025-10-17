@@ -1,0 +1,44 @@
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#0f1724;--card:#0b1220;--muted:#9aa4b2;--accent:#2dd4bf;--accent2:#60a5fa;--glass:rgba(255,255,255,0.03)
+}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:#e6eef6;min-height:100vh}
+
+/* Login */
+.auth-bg{display:flex;align-items:center;justify-content:center;height:100vh}
+.auth-box{width:360px;padding:34px;border-radius:16px;background:var(--glass);box-shadow:0 8px 40px rgba(2,6,23,0.8);text-align:center}
+.auth-box h1{font-size:28px;color:var(--accent2)}
+.auth-box h1 span{color:var(--accent)}
+.form-card input{width:100%;padding:12px;margin:9px 0;border-radius:10px;border:1px solid rgba(255,255,255,0.04);background:var(--glass);color:inherit}
+.form-card button{width:100%;padding:12px;border-radius:10px;border:none;background:linear-gradient(90deg,var(--accent),var(--accent2));color:#04263b;font-weight:700;cursor:pointer}
+.interest-tags{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:10px 0;color:var(--muted)}
+.interest-tags label{background:rgba(255,255,255,0.05);padding:6px 12px;border-radius:8px;cursor:pointer}
+.interest-tags input{margin-right:6px}
+
+/* Header */
+.site-header{display:flex;justify-content:space-between;align-items:center;padding:18px 4%;background:rgba(3,7,18,0.2);backdrop-filter:blur(6px);position:sticky;top:0;z-index:50;border-bottom:1px solid rgba(255,255,255,0.02)}
+.site-title{font-size:20px;font-weight:700;color:var(--accent2)}
+.header-controls{display:flex;align-items:center;gap:8px}
+.header-controls input{padding:8px 12px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit;width:260px}
+.header-controls button{padding:8px 10px;border-radius:8px;border:none;background:rgba(255,255,255,0.03);color:inherit;cursor:pointer}
+.header-controls button.danger{background:linear-gradient(90deg,#ff7a7a,#ff5a5a);color:#fff}
+
+/* Category */
+.category-bar{display:flex;gap:8px;padding:12px 4%;flex-wrap:wrap;align-items:center}
+.category-btn{background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.03);padding:8px 12px;border-radius:999px;color:var(--muted);cursor:pointer;font-weight:600}
+.category-btn.active{background:linear-gradient(90deg,var(--accent),var(--accent2));color:#01202a}
+
+/* News Cards */
+.news-container{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;padding:20px 4%}
+.news-card{background:var(--glass);border-radius:12px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 8px 30px rgba(2,6,23,0.7);transition:transform .18s}
+.news-card:hover{transform:translateY(-6px)}
+.card-img{width:100%;height:180px;object-fit:cover}
+.card-body{padding:14px}
+.card-title{color:var(--accent2);font-size:16px;margin-bottom:8px}
+.card-desc{color:var(--muted);font-size:14px}
+.card-actions{display:flex;align-items:center;justify-content:space-between;padding:10px 14px;border-top:1px solid rgba(255,255,255,0.02)}
+.card-actions .read-btn{padding:8px 12px;border-radius:8px;background:linear-gradient(90deg,var(--accent),var(--accent2));color:#04263b;text-decoration:none;font-weight:700}
+
+/* Notification */
+.notification-box{position:fixed;bottom:20px;right:20px;background:linear-gradient(90deg,var(--accent),var(--accent2));color:#04263b;padding:14px 18px;border-radius:12px;font-weight:600;box-shadow:0 6px 24px rgba(0,0,0,0.6);animation:fadein .4s}
+@keyframes fadein{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}

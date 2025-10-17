@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>NewsFetch Pro — Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="dashboard">
+  <header class="site-header">
+    <div class="site-title">📰 NewsFetch <span>Pro</span></div>
+
+    <div class="header-controls">
+      <input id="searchInput" type="search" placeholder="Search news..." />
+      <button id="searchBtn">Search</button>
+      <button id="toggleTheme">🌙</button>
+      <button id="favoritesBtn">★ Favorites</button>
+      <button id="logoutBtn" class="danger">Logout</button>
+    </div>
+  </header>
+
+  <nav class="category-bar" id="categoryBar"></nav>
+
+  <main>
+    <section id="statusMessage" class="status-msg" hidden></section>
+    <section id="newsContainer" class="news-container"></section>
+  </main>
+
+  <div id="notificationBox" class="notification-box" hidden>
+    <p id="notificationText">🔔 You have new articles in your favorite topics!</p>
+  </div>
+
+  <template id="cardTemplate">
+    <article class="news-card">
+      <img class="card-img" />
+      <div class="card-body">
+        <h3 class="card-title"></h3>
+        <p class="card-desc"></p>
+      </div>
+      <div class="card-actions">
+        <button class="summary-btn">Summarize</button>
+        <button class="fav-btn">☆</button>
+        <a class="read-btn" target="_blank" rel="noopener">Read →</a>
+      </div>
+    </article>
+  </template>
+
+  <script src="news.js"></script>
+</body>
+</html>
